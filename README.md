@@ -7,19 +7,35 @@ obiect tracking의 프레임 워크중 하나인 deep sort에 대해 자세히 �
 ## 👏 팀 소개 
 
 |이지호|이제희|박준하|김수연|
-|:--:|:--:|:--:|
-|![image](https://github.com/khuda-3rd/README_example/assets/90135669/e5ebdc70-3dfa-493f-a865-3d14b2bc7685)|![image](https://github.com/khuda-3rd/README_example/assets/90135669/6f986eee-9e0d-48cb-b2f5-fa9cf785fb8e)|![image](https://github.com/khuda-3rd/README_example/assets/90135669/fcb6281e-6bdd-4f06-9cb7-eb5772c88803)|
-|[개인 리포지토리](https://github.com/khuda-3rd)|[개인 리포지토리](https://github.com/khuda-3rd)|[개인 리포지토리](https://github.com/khuda-3rd)|
-|역할1|역할2|역할3|
+|![image](https://github.com/khuda-3rd/README_example/assets/90135669/e5ebdc70-3dfa-493f-a865-3d14b2bc7685)|![image](https://github.com/khuda-3rd/README_example/assets/90135669/6f986eee-9e0d-48cb-b2f5-fa9cf785fb8e)|![image](https://github.com/khuda-3rd/README_example/assets/90135669/fcb6281e-6bdd-4f06-9cb7-eb5772c88803)|![image](https://github.com/khuda-3rd/README_example/assets/90135669/fcb6281e-6bdd-4f06-9cb7-eb5772c88803)|
+|[개인 리포지토리](https://github.com/khuda-3rd)|[개인 리포지토리](https://github.com/khuda-3rd)|[개인 리포지토리](https://github.com/khuda-3rd)|[개인 리포지토리](https://github.com/khuda-3rd)|
 
 
 ## 🔎 핵심 기능 구현
-프로젝트를 위해서 어떤 이론적 부분 혹은 데이터를 사용하였고, 이를 어떻게 프로젝트에 활용하였는지 기술해주시면 됩니다. 
+###OBJECT TRACKING
 
-Service Architecture, Model Process, 데모(시현) 영상, 사용 데이터, 디렉토리 파일 구조 등 다양한 내용 중 프로젝트에 알맞은 부분을 Markdown의 표나 이미지 등을 통해 자유롭게 작성하시면 됩니다.
+![Untitled](https://github.com/LEE-JIHO-1016/KHUDA-Project/assets/76989907/0c5b865a-ffb8-4a8f-8a73-c2601aaed182)
+
+일단 영상이 들어오면 한 부분에 물체가 있다는걸 인식 (Object Recognition)하고,
+
+그 물체가 무엇인지(Objectt Classification)하고 정확한 위치를 찍어줌(Object Localization). 
+
+OC와 OL이 합쳐지면 Object Detection, OD 가 된다. 추후 OD의 결과로 각 Box를 이전 Frame과 비교 하여 ID를 매칭시키고 여러가지 기술들을 사용 하는게 Object Tracking
+
+두가지로 나눠어진다. 
+![Untitled](https://github.com/LEE-JIHO-1016/KHUDA-Project/assets/76989907/075c2a5f-734b-4fb8-998e-e473cde1363e)
 
 
+###DEEP SORT
+Deep SORT(Deep Simple Online and Realtime Tracking)는 객체 추적(object tracking)을 위한 알고리즘입니다. 객체 추적은 비디오에서 프레임 간에 움직이는 객체를 식별하고 추적하는 작업을 의미합니다. Deep SORT는 이러한 객체 추적 작업을 실시간으로 수행할 수 있는 딥러닝 기반의 알고리즘입니다.
 
+Deep SORT는 두 가지 주요 구성 요소인 객체 감지(object detection)와 객체 추적(object tracking)으로 구성됩니다. 객체 감지는 주어진 프레임에서 객체를 식별하는 작업을 수행하고, 객체 추적은 프레임 간에 객체의 이동을 추적하는 작업을 수행합니다.
+
+Deep SORT는 객체 감지를 위해 일반적으로 딥러닝 기반의 객체 감지 모델인 YOLO(You Only Look Once)나 SSD(Single Shot MultiBox Detector)와 같은 모델을 사용합니다. 이러한 모델은 이미지나 비디오에서 객체를 감지하고 경계 상자(bounding box)를 추출하는 데 사용됩니다.
+
+객체 추적 단계에서 Deep SORT는 추적 대상 객체와 프레임 간의 관계를 모델링하기 위해 딥러닝 기반의 Siamese 네트워크를 사용합니다. Siamese 네트워크는 추적 대상 객체의 특징을 학습하고 이를 사용하여 프레임 간에 객체의 유사성을 계산합니다. 이를 통해 객체 추적을 지속적으로 유지할 수 있습니다.
+
+또한 Deep SORT는 객체 추적의 정확성을 향상시키기 위해 Kalman 필터(Kalman filter)와 특징 기반의 데이터 연결(data association) 알고리즘을 사용합니다. Kalman 필터는 객체의 위치와 속도를 추적하고 예측하는 데 사용되며, 데이터 연결 알고리즘은 객체 감지와 추적 결과를 연결하여 추적의 일관성을 유지합니다.
 
 
 ## 📄 Reference
