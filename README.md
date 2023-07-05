@@ -12,7 +12,7 @@ obiect tracking의 프레임 워크중 하나인 deep sort에 대해 자세히 �
 
 
 ## 🔎 핵심 기능 구현
-###OBJECT TRACKING
+### OBJECT TRACKING
 
 ![Untitled](https://github.com/LEE-JIHO-1016/KHUDA-Project/assets/76989907/0c5b865a-ffb8-4a8f-8a73-c2601aaed182)
 
@@ -26,15 +26,15 @@ OC와 OL이 합쳐지면 Object Detection, OD 가 된다. 추후 OD의 결과로
 ![Untitled](https://github.com/LEE-JIHO-1016/KHUDA-Project/assets/76989907/075c2a5f-734b-4fb8-998e-e473cde1363e)
 
 
-###DEEP SORT
+### DEEP SORT
 Deep SORT(Deep Simple Online and Realtime Tracking)는 객체 추적(object tracking)을 위한 알고리즘입니다. 객체 추적은 비디오에서 프레임 간에 움직이는 객체를 식별하고 추적하는 작업을 의미합니다. Deep SORT는 이러한 객체 추적 작업을 실시간으로 수행할 수 있는 딥러닝 기반의 알고리즘입니다.
-
+<br/> 
 Deep SORT는 두 가지 주요 구성 요소인 객체 감지(object detection)와 객체 추적(object tracking)으로 구성됩니다. 객체 감지는 주어진 프레임에서 객체를 식별하는 작업을 수행하고, 객체 추적은 프레임 간에 객체의 이동을 추적하는 작업을 수행합니다.
-
+<br/>
 Deep SORT는 객체 감지를 위해 일반적으로 딥러닝 기반의 객체 감지 모델인 YOLO(You Only Look Once)나 SSD(Single Shot MultiBox Detector)와 같은 모델을 사용합니다. 이러한 모델은 이미지나 비디오에서 객체를 감지하고 경계 상자(bounding box)를 추출하는 데 사용됩니다.
-
+<br/>
 객체 추적 단계에서 Deep SORT는 추적 대상 객체와 프레임 간의 관계를 모델링하기 위해 딥러닝 기반의 Siamese 네트워크를 사용합니다. Siamese 네트워크는 추적 대상 객체의 특징을 학습하고 이를 사용하여 프레임 간에 객체의 유사성을 계산합니다. 이를 통해 객체 추적을 지속적으로 유지할 수 있습니다.
-
+<br/>
 또한 Deep SORT는 객체 추적의 정확성을 향상시키기 위해 Kalman 필터(Kalman filter)와 특징 기반의 데이터 연결(data association) 알고리즘을 사용합니다. Kalman 필터는 객체의 위치와 속도를 추적하고 예측하는 데 사용되며, 데이터 연결 알고리즘은 객체 감지와 추적 결과를 연결하여 추적의 일관성을 유지합니다.
 
 
